@@ -1,0 +1,11 @@
+function rgb(r, g, b) {
+	return `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`
+}
+
+cells = $("#mw-content-text > div.mw-parser-output > table:nth-child(33) td")
+colors = []
+for (i=0; i<cells.length; i++) {
+	cell = cells[i]
+	color = eval(cell.style.backgroundColor)
+	colors.push(color)
+}
